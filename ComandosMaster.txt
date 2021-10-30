@@ -1,0 +1,324 @@
+systemctl status
+ping www.google.com
+apt-get update
+pwd
+sudo apt install wget build-essential apache2 php libapache2-mod-php php-gd libgd-dev unzip
+useradd nagios
+groupadd nagcmd
+usermod -a -G nagcmd nagios
+usermod -a -G nagios,nagcmd www-data
+wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.2.0.tar.gz
+tar -xzf nagios-4.2.0.tar.gz
+cd nagios-4.2.0
+configure --with-nagios-group=nagios --with-command-group=nagcmd
+make all
+make install
+make install-init
+make install-commandmode
+make install-config
+usr/bin/install -c -m 644 sample-config/httpd.conf /etc/apache2/sites-available/nagios.conf
+a2enmod rewrite
+a2enmod cgi
+htpasswd -c /usr/local/nagios/etc/htpasswd.user nagiosadmin
+systemctl restart apache2
+systemctl restart nagios
+etc/init.d/nagios restart
+ln -s /etc/apache2/sites-available/nagios.conf /etc/apache2/sites-enabled/
+etc/init.d/apache restart
+etc/init.d/apache2 restart
+etc/init.d/apache2 nagios
+etc/init.d/nagios restart
+pwd
+cd usr/ 
+cd bin/
+cd /
+cd bin
+cd /var/log/
+cd apache2/
+nano error.log 
+nano /usr/local/nagios/etc/htpasswd.use
+nano /usr/local/nagios/etc/htpasswd.user 
+nano error.log 
+nano /etc/apache2/sites-available/nagios.conf 
+htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+etc/init.d/nagios apache2
+etc/init.d/nagios restart
+etc/init.d/apache2 restart
+etc/init.d/nagios restart
+ln -s /etc/apache2/sites-available/nagios.conf /etc/apache2/sites-enabled/
+wcd /
+cd /
+cd usr/
+cd local/
+cd /home/
+cd ubuntu/
+cd /usr/local/nagios/
+cd libexec/
+cd
+wget -c http://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
+tar -xvzf nagios-plugins-2.3.3.tar.gz
+cd nagios-plugins-2.3.3
+configure 
+make
+make install
+cd /usr/local/nagios/libexec/
+cd /etc/
+cd /usr/local/nagios/
+cd etc/
+cd objects/
+nano nagios.cfg 
+pwd
+cd var/
+cd archives
+apt install make
+apt install net-snmp
+apt-get install net-snmp
+apt install snmpd snmp libsnmp-dev
+nano /usr/local/nagios/etc/objects/localhost.cfg 
+chronyc sources -v
+apt install chrony
+history
+shutdown -h now
+history
+shutdown -h now
+systemctl status nagios
+cd /usr/local/nagios/
+cd var/
+cd archives/
+cd..
+cd etc/
+cd objects/
+nano commands.cfg 
+nano localhost.cfg 
+systemctl status snmpd
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+cd /usr/local/nagios/libexec/
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+history
+history | grep net-
+sudo snap install net-snmp
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+sudo snap install net-snmp-uti
+apt install libsnmp-dev
+apt install snmpd snmp
+systemctl restart nagios
+systemctl restart sntpd
+cd /etc/init.d/
+systemctl status snmpd
+systemctl restart snmpd
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+pwd
+cd usr/
+cd local/
+cd /
+cd home/
+cd ubuntu/
+cd nagios-4.2.0
+cd /usr/local/nagios/
+cd libexec/
+cd /home/
+cd ubuntu/
+wget -c http://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
+tar -xvzf nagios-plugins-2.3.3.tar.gz
+cd nagios-plugins-2.3.3
+configure
+make
+make install
+cd po/
+cd libexec/
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.2.3.1.5.1
+usr/local/nagios/libexec/check_snmp -H 10.1.2.10 -C public -o .1.3.6.1.2.1.25.1.5.0
+cd /home/
+cd ubuntu/
+snmpwalk -v 1 -c public 10.1.2.10
+cd /usr/local/nagios/
+cd etc/
+cd objects/
+cd commands.cfg 
+nano commands.cfg 
+nano localhost.cfg 
+mkdir /usr/local/nagios/etc/hosts
+cd hosts/
+nano /usr/local/nagios/etc/hosts/monitoring1.cfg
+nano /usr/local/nagios/etc/nagios.cfg 
+cd objects/
+nano localhost.cfg 
+cd hosts/
+nano monitoring1.cfg 
+cd objects/
+nano nagios.cfg 
+cd hosts/
+nano nagios.cfg 
+nano /usr/local/nagios/etc/hosts/monitoring1.cfg
+usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+systemctl restart nagios apache2
+systemctl status apache2
+pwd
+cd hosts/
+nano monitoring1.cfg 
+cd objects/
+nano commands.cfg 
+nano /usr/local/nagios/etc/hosts/monitoring1.cfg 
+nano /usr/local/nagios/etc/nagios.cfg 
+nano /usr/local/nagios/etc/objects/localhost.cfg 
+nano /usr/local/nagios/etc/hosts/monitoring1.cfg 
+systemctl restart nagios httpd2
+systemctl restart nagios apache2
+cd var/
+nano nagios.
+nano nagios.log
+nano archives/
+cd archives/
+cd etc/
+cd share/
+cd include/
+cd etc/
+cd objects/
+nano nagios.cfg 
+nano nagios.cfg  | grep .log
+history
+cd /usr/local/nagios/var/
+cd archives/
+nano nagios.lo
+nano nagios.log
+shutdown -h now
+systemctl status nagios
+systemctl start nagios
+systemctl status apche2
+shutdown -h now
+systemctl status nagios
+cd /usr/local/nagios/
+cd var/
+cat nagios.log 
+cd archives/
+cd /var/log/
+cat syslog
+cat /usr/local/nagios/var/nagios.log 
+shutdown -h now
+pwd
+cd /opt
+wget https://assets.nagios.com/downloads/nagios-log-server/nagioslogserver-latest.tar.gz 
+tar xzf nagioslogserver-latest.tar.gz
+cd nagioslogserver
+fullinstall
+cd /
+cd /usr/local/nagios
+cd var/
+nano nagios.log
+sudo apt install chrony
+nano /etc/chrony/chrony.conf
+sudo /etc/init.d/chrony restart
+chronyc sources -v
+chronyc tracking
+nano nagios.log 
+systemctl restart nagios
+systemctl restart httpd2
+systemctl restart apache2
+systemctl enable chrony
+shutdown -h now
+cd /
+cd usr/
+cd /home/
+cd ubuntu/
+curl -sS -O http://127.0.0.1/nagioslogserver/scripts/setup-linux.sh
+cd /usr/local/nagios/var/
+pwd
+sudo bash setup-linux.sh -s 127.0.0.1 -p 5544 -f "/path/to/file /usr/local/nagios/var/*.log" -t GIOS_CORE
+cd /home/ubuntu/
+sudo bash setup-linux.sh -s 127.0.0.1 -p 5544 -f "/path/to/file /usr/local/nagios/var/*.log" -t GIOS_CORE
+nano /usr/local/nagios/var/nagios.log
+sudo bash setup-linux.sh -s 127.0.0.1 -p 5544 -f "/usr/local/nagios/var/nagios.log /path/to/another/log" -t NAGIOS_CORE_TELCO
+cd /
+nano /usr/local/nagios/var/nagios.log
+cd /
+cd home/
+cd ubuntu/
+sudo bash setup-linux.sh -s 127.0.0.1 -p 5544 -f "/usr/local/nagios/var/nagios.log" -t NAGIOS_CORE_TELCO
+cd /etc/rsyslog.d/90-nagioslogserver_usr_local_nagios_var_nagios.log.conf 
+nano /etc/rsyslog.d/90-nagioslogserver_usr_local_nagios_var_nagios.log.conf 
+nano /etc/rsyslog.d/nagioslogserver.conf 
+cd /tmp
+curl -s -O http://127.0.0.1/nagioslogserver/scripts/setup-linux.sh
+cat setup-linux.sh 
+sudo bash setup-linux.sh -s 127.0.0.1 -p 5544 -f "/usr/local/nagios/var/nagios.log" -t nagios_core
+history
+cd /usr/local/nagios
+cd share/
+cd bin/
+cd v
+cd var/
+cd share/
+cd etc/
+cd objects/
+nano localhost.cfg 
+nano nagios.cfg 
+cd ho
+cd hosts/
+nano monitoring1.cfg 
+cd etc/
+cd nagios.cfg 
+nano nagios.cfg 
+cd /etc/
+pwd
+cd /usr/local/nagios
+cd var/
+cd etc/
+cd objects/
+nano localhost.cfg 
+cd objects/
+cd share/
+cd var/
+cd archives/
+cd include/
+cd bin/
+cd var/
+cd sbin/
+cd etc/
+cd hosts/
+nano monitoring1.cfg 
+cd var/
+cd /etc/
+cd /usr/local/nagios
+cd etc/
+cd objects/
+nano commands.cfg 
+nano localhost.cfg 
+pwd
+nano cgi.cfg 
+nano nagios.cfg 
+nano objects/
+cd objects/
+nano templates.cfg 
+nano contacts.cfg 
+nano printer.cfg 
+nano /etc/snmp/snmp.conf 
+cd /
+vim /etc/snmp/snmpd.conf
+snmpwalk -v 1 -c public 10.1.2.10
+cd /usr/local/nagios/var/
+cd etc/
+cd objects/
+nano commands.cfg 
+snmpwalk -v2c -c public 10.1.2.10 .1.3.6.1.4.1.2021.4.11.0
+check_snmp -v2c -c public 10.1.2.10 .1.3.6.1.4.1.2021.4.11.0
+nano commands.cfg 
+cd libexec/
+nano check_snmp 
+check_snmp -v2c -c public 10.1.2.10 .1.3.6.1.4.1.2021.4.11.0
+check_snmp -v2c -c public 10.1.2.10 .1.3.6.1.4.1.2021.4.11.0
+check_snmp -o .1.3.6.1.4.1.2021.4.11.0 -H 10.1.2.10
+cd etc/
+cd objects/
+nano commands.cfg 
+cat commands.cfg | grep check_s
+nano commands.cfg 
+cd hosts/
+nano monitoring1.cfg 
+usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+restart nagios httpd
+systemctl restart nagios httpd
+systemctl restart nagios
+systemctl restart apache2
+cd objects/
+nano commands.cfg 
